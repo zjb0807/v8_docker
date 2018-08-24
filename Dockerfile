@@ -25,7 +25,7 @@ RUN fetch --nohooks v8 && \
     git checkout $V8_VERSION && \
     gclient sync && \
     #tools/dev/v8gen.py x64.release  && \
-    gn gen out.gn/x64.release --args="is_debug=false target_cpu=\"x64\" is_component_build=false v8_static_library=true use_custom_libcxx=false use_custom_libcxx_for_host=false" && \
+    gn gen out.gn/x64.release --args="is_debug=false target_cpu=\"x64\" is_component_build=true v8_static_library=true use_custom_libcxx=false use_custom_libcxx_for_host=false" && \
     ninja -C out.gn/x64.release
 
 
